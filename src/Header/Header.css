@@ -1,0 +1,54 @@
+.HeaderLinks {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding-bottom: 60px;
+    height: 40px;
+    box-shadow: var(--shadow);
+    background: transparent;
+    position: sticky;
+   
+}
+
+.HeaderLinks-SubLinks {
+    height: 40px;
+    text-align: center;
+        padding: 10px 0 25px 40px;
+}
+
+.active {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.redden{
+    color:lightgreen;
+}
+
+.HeaderLinks a {
+    text-decoration: none;
+    border-bottom: none;
+    padding: 4px;
+    line-height: 40px;
+}
+
+.HeaderLinks a:hover {
+    background-color: transparent;
+    color: initial;
+    padding: 5px;
+}
+
+@media (max-width: 769px) {
+  .HeaderLinks {
+    flex-direction: column;
+    height: 100px !important;
+    padding-bottom: 70px;
+    justify-content: space-between;
+  }
+
+  .HeaderLinks-SubLinks {
+    height: 40px;
+    text-align: center;
+    padding: 0px;
+  }
+}
