@@ -1,9 +1,11 @@
 import React, { useState,useEffect, useContext } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import axios from 'axios';
+import dotenv from "dotenv";
+dotenv.config()
 import UserContext from '../../context/UserContext';
 import { Box,Badge,Stack,useToast, Heading, useColorModeValue, Button,HStack, VStack, Image, AspectRatio, Container, Flex, Spacer, Center, Text, Divider, useProps } from "@chakra-ui/react"
-const url = "http://localhost:8000/votesessions/";
+const url =`${process.env.BASE_API}/votesessions/`;
 
 
 
@@ -38,9 +40,8 @@ const ContestantCard = (props) => {
             email,
             contestant
           };
-          console.log(otpData);
-          await axios.post(`http://localhost:8000/auth/confirmation`, otpData)
-          
+          console.log(confirmData);
+          await axios.post(`${process.env.BASE_API}/auth/confirmation`, confirmData)
     }catch(error){
         console.log(error);
     }

@@ -5,7 +5,8 @@ import LoadingOverlay from 'react-loading-overlay';
 import AuthContext from '../context/AuthContext';
 import UserContext from '../context/UserContext';
 import {useHistory} from "react-router-dom";
-
+import dotenv from "dotenv";
+dotenv.config()
 import {   Flex,Select,
     Box,
     FormControl,
@@ -35,12 +36,12 @@ import axios from 'axios'
     const MotionBox = motion(Box)
     const history = useHistory();
 
-    const url = "http://localhost:8000/auth/";
+    const url = `${process.env.BASE_API}/auth/`;
     const toast = useToast()
     const[name, setName]= useState('');
     const[email, setEmail]= useState('');
     const[nin, setNin]= useState('');
-    const[role, setRole]= useState("voter");
+    const[role, setRole]= useState("admin");
     const[password, setPassword]= useState('');
     const[passwordVerify, setPasswordVerify]= useState('');
     const[otpverify, setOtpVerify]= useState('');

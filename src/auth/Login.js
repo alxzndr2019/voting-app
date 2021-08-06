@@ -3,12 +3,14 @@ import {useHistory} from "react-router-dom";
 import AuthContext from '../context/AuthContext';
 import UserContext from '../context/UserContext';
 import axios from 'axios';
+import dotenv from "dotenv";
+dotenv.config()
 import { Flex,Box,useToast,FormControl,FormLabel,Input,Checkbox,Stack,Link,Button,Heading,Text,useColorModeValue} from '@chakra-ui/react';
 
 const Login = () => {
 
     const toast = useToast()
-    const url = "http://localhost:8000/auth/";
+    const url = `${process.env.BASE_API}/auth/`;
 
   const[email, setEmail]= useState('');
   const[errorMessage, setErrorMesssage] = useState()

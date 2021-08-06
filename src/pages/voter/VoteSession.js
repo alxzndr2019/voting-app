@@ -4,7 +4,8 @@ import { Box, Heading,HStack ,SimpleGrid, Divider, Input, Button, Image, AspectR
 import UserContext from '../../context/UserContext';
 import axios from 'axios';
 import ContestantCard from "./ContestantCard";
-
+import dotenv from "dotenv";
+dotenv.config()
 
 const VoteSession = () => {
     const {currentuser} = useContext(UserContext);
@@ -14,7 +15,7 @@ const VoteSession = () => {
 
     const {state}=useLocation();
     const history = useHistory();
-    const url = "http://localhost:8000/votesessions/";
+    const url =`${process.env.BASE_API}/votesessions/`;
 
         useEffect(()=>{
             getVotesession()

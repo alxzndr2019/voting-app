@@ -1,7 +1,8 @@
 import React, { useState,useEffect } from 'react'
 import axios from 'axios';
 import UserContext from '../../context/UserContext';
-
+import dotenv from "dotenv";
+dotenv.config()
 import VoteTrackerCard from './VoteTrackerCard'
 import { Stat,
     StatLabel,
@@ -15,7 +16,7 @@ const VoteTracker = () => {
     const[contestant, setContestant]=useState([])
     const[votesession, setVotesession]=useState([])
     const[mycontestant, setMycontestant]=useState([])
-    const url = 'http://localhost:8000/'
+    const url = process.env.BASE_API;
 
     
     useEffect(()=>{

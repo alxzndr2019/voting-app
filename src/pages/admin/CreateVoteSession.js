@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useContext } from "react"
 import axios from 'axios';
+import dotenv from "dotenv";
+dotenv.config()
 import { Flex,Center, ModalOverlay,
     ModalContent,
     ModalHeader,
@@ -20,7 +22,8 @@ const CreateVoteSession = () => {
     const[votes, setVotes]=useState([])
     const[voters, setVoters]=useState([])
 
-    const url = "http://localhost:8000/votesessions/";
+    const url =`${process.env.BASE_API}/votesessions/`;
+
     const toast = useToast()
 
 

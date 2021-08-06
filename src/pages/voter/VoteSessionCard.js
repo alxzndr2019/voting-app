@@ -2,9 +2,11 @@ import React, { useState,useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { Box,Badge,Stack, Heading, useColorModeValue,useToast, Button,HStack, VStack, Image, AspectRatio, Container, Flex, Spacer, Center, Text, Divider, useProps } from "@chakra-ui/react"
 import axios from 'axios';
-
+import dotenv from "dotenv";
+dotenv.config()
 const VoteSessionCard = (props) => {
-    const url = "http://localhost:8000/votesessions/";
+  const url =`${process.env.BASE_API}/votesessions/`;
+    
     const toast = useToast()
 
     const[contestant, setContestant]=useState(props.votesession.contestant)

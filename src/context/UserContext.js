@@ -1,11 +1,12 @@
 import React, { useEffect, useState, createContext } from 'react';
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
-
+import dotenv from "dotenv";
+dotenv.config()
 const UserContext = createContext();
 
 function UserContextProvider(props){
-    const url = 'http://localhost:8000';
+    const url =process.env.BASE_API;
 
     const [currentuser, setCurrentuser] = useState({});
 

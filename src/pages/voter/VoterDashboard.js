@@ -4,14 +4,18 @@ import { Link, useHistory, useLocation } from 'react-router-dom'
 
 import UserContext from '../../context/UserContext';
 import VoteSessionCard from "./VoteSessionCard";
+import dotenv from "dotenv";
+dotenv.config()
 import { Spinner,Divider, Grid, SimpleGrid, Box, Heading, Button, Image, AspectRatio, Container, Flex, Spacer, Center, Text } from "@chakra-ui/react"
 const VoterDashboard = () => {
     const {currentuser} = useContext(UserContext);
 
     const[votesessions, setVotesessions]=useState([])
-    const url = 'http://localhost:8000/'
+    const url =`${process.env.BASE_API}/`;
+
     const deadline = 'December 31 2015 23:59:59 GMT+0200';
-    const {state}=useLocation();
+    const {state}=useLocation();    const url =process.env.BASE_API;
+
 
     function getTimeRemaining(endtime){
         const total = Date.parse(endtime) - Date.parse(new Date());

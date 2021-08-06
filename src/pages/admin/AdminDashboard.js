@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useContext } from "react"
 import axios from 'axios';
+import dotenv from "dotenv";
+dotenv.config()
 import UserContext from '../../context/UserContext';
 import { Spinner,Divider,useColorModeValue, Box, Heading, Button, Image, AspectRatio, Container, Flex, Spacer, Center, Text, SimpleGrid} from "@chakra-ui/react"
 
@@ -8,7 +10,7 @@ const AdminDashboard = () => {
     const[votesessions, setVotesessions]=useState([])
     const[users, setUsers]=useState([])
 
-    const url = 'http://localhost:8000/'
+    const url =process.env.BASE_API;
     useEffect(()=>{
         const interval = setInterval(()=>{
             getVotesessions()
@@ -18,7 +20,7 @@ const AdminDashboard = () => {
          return ()=>clearInterval(interval);
         },[]);
         const getUsers =()=>{
-            axios.get(`${url}auth/users`)
+            axios.get(`${url}/auth/users`)
             .then((response)=>{
               const allUsers = response.data;
               setUsers(allUsers);
@@ -28,7 +30,7 @@ const AdminDashboard = () => {
     
     console.log(votesessions)
     const getVotesessions =()=>{
-        axios.get(`${url}votesessions`)
+        axios.get(`${url}/votesessions`)
         .then((response)=>{
           const allVotesessions = response.data;
           setVotesessions(allVotesessions);

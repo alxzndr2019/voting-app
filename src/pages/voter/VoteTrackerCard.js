@@ -1,7 +1,8 @@
 import React, { useState,useEffect } from 'react'
 import axios from 'axios';
 import UserContext from '../../context/UserContext';
-
+import dotenv from "dotenv";
+dotenv.config()
 import { Stat,
     StatLabel,
     StatNumber,

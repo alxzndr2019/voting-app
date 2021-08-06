@@ -1,10 +1,12 @@
 import React, { useEffect, useState, createContext } from 'react';
 import axios from 'axios'
+import dotenv from "dotenv";
+dotenv.config()
 const AuthContext = createContext();
 
 function AuthContextProvider(props){
     const [loggedIn, setLoggedIn] = useState(undefined);
-    const url = 'http://localhost:8000';
+    const url =process.env.BASE_API;
 
     async function getLoggedIn(){
         const loggedInRes = await axios.get(`${url}/auth/loggedIn`);
