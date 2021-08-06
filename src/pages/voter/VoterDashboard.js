@@ -14,7 +14,7 @@ const VoterDashboard = () => {
     const url =`${process.env.BASE_API}/`;
 
     const deadline = 'December 31 2015 23:59:59 GMT+0200';
-    const {state}=useLocation();    const url =process.env.BASE_API;
+    const {state}=useLocation();    
 
 
     function getTimeRemaining(endtime){
