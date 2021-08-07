@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useContext } from "react"
 import axios from 'axios';
 import dotenv from "dotenv";
-dotenv.config()
 import UserContext from '../../context/UserContext';
 import { Spinner,Divider,useColorModeValue, Box, Heading, Button, Image, AspectRatio, Container, Flex, Spacer, Center, Text, SimpleGrid} from "@chakra-ui/react"
 
+dotenv.config()
 
 const AdminDashboard = () => {
     const[votesessions, setVotesessions]=useState([])

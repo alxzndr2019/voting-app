@@ -5,8 +5,8 @@ import { Link, useHistory, useLocation } from 'react-router-dom'
 import UserContext from '../../context/UserContext';
 import VoteSessionCard from "./VoteSessionCard";
 import dotenv from "dotenv";
-dotenv.config()
 import { Spinner,Divider, Grid, SimpleGrid, Box, Heading, Button, Image, AspectRatio, Container, Flex, Spacer, Center, Text } from "@chakra-ui/react"
+dotenv.config()
 const VoterDashboard = () => {
     const {currentuser} = useContext(UserContext);
 

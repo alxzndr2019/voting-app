@@ -6,7 +6,6 @@ import AuthContext from '../context/AuthContext';
 import UserContext from '../context/UserContext';
 import {useHistory} from "react-router-dom";
 import dotenv from "dotenv";
-dotenv.config()
 import {   Flex,Select,
     Box,
     FormControl,
@@ -32,6 +31,8 @@ import {   Flex,Select,
     ModalCloseButton,
    } from "@chakra-ui/react"
 import axios from 'axios'
+dotenv.config()
+
    function Register(){
     const MotionBox = motion(Box)
     const history = useHistory();

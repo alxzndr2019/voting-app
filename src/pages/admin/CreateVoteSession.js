@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useContext } from "react"
 import axios from 'axios';
 import dotenv from "dotenv";
-dotenv.config()
 import { Flex,Center, ModalOverlay,
     ModalContent,
     ModalHeader,
     ModalFooter, ModalCloseButton, Modal, ModalBody,   useDisclosure,
     Divider, Box,useToast,FormControl,FormLabel,Input,Checkbox,Stack,Link,Button,Heading,Text,useColorModeValue} from '@chakra-ui/react';
 
+    dotenv.config()
 
 const CreateVoteSession = () => {
     const[position, setPosition]=useState('')

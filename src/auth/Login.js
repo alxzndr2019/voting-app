@@ -4,8 +4,8 @@ import AuthContext from '../context/AuthContext';
 import UserContext from '../context/UserContext';
 import axios from 'axios';
 import dotenv from "dotenv";
-dotenv.config()
 import { Flex,Box,useToast,FormControl,FormLabel,Input,Checkbox,Stack,Link,Button,Heading,Text,useColorModeValue} from '@chakra-ui/react';
+dotenv.config()
 
 const Login = () => {
 

@@ -2,7 +2,6 @@ import React, { useState,useEffect } from 'react'
 import axios from 'axios';
 import UserContext from '../../context/UserContext';
 import dotenv from "dotenv";
-dotenv.config()
 import VoteTrackerCard from './VoteTrackerCard'
 import { Stat,
     StatLabel,
@@ -11,6 +10,7 @@ import { Stat,
     StatArrow,
     StatGroup, Spinner,Divider, Box, Heading, Button, Image, AspectRatio, Container, Flex, Spacer, Center, Text } from "@chakra-ui/react"
 
+    dotenv.config()
 
 const VoteTracker = () => {
     const[contestant, setContestant]=useState([])
