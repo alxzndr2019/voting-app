@@ -2,8 +2,8 @@ import React from 'react';
 
 import './App.css';
 import Routes from './Routes'
-import  AuthContextProvider  from './context/AuthContext';
-import UserContextProvider from './context/UserContext';
+import AuthContext, { AuthContextProvider } from './context/AuthContext';
+import UserContext, { UserContextProvider } from './context/UserContext';
 import {
   ChakraProvider,
   theme,
