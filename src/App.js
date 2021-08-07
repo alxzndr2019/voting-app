@@ -1,10 +1,9 @@
-import React,{useContext} from 'react';
+import React from 'react';
 
-import logo from './logo.svg';
 import './App.css';
 import Routes from './Routes'
-import AuthContext, { AuthContextProvider } from './context/AuthContext';
-import UserContext, { UserContextProvider } from './context/UserContext';
+import  AuthContextProvider  from './context/AuthContext';
+import UserContextProvider from './context/UserContext';
 import {
   ChakraProvider,
   theme,
