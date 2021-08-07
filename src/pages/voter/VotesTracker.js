@@ -16,7 +16,7 @@ const VoteTracker = () => {
     const[contestant, setContestant]=useState([])
     const[votesession, setVotesession]=useState([])
     const[mycontestant, setMycontestant]=useState([])
-    const url = process.env.BASE_API;
+    const url = `https://voting-be.herokuapp.com`;
 
     
     useEffect(()=>{

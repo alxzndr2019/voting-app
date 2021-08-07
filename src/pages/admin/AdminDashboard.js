@@ -10,7 +10,7 @@ const AdminDashboard = () => {
     const[votesessions, setVotesessions]=useState([])
     const[users, setUsers]=useState([])
 
-    const url =process.env.BASE_API;
+    const url =`https://voting-be.herokuapp.com`;
     useEffect(()=>{
         const interval = setInterval(()=>{
             getVotesessions()

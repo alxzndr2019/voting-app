@@ -6,7 +6,7 @@ const AuthContext = createContext();
 
 function AuthContextProvider(props){
     const [loggedIn, setLoggedIn] = useState(undefined);
-    const url =process.env.BASE_API;
+    const url =`https://voting-be.herokuapp.com`;
 
     async function getLoggedIn(){
         const loggedInRes = await axios.get(`${url}/auth/loggedIn`);

@@ -6,7 +6,7 @@ dotenv.config()
 const UserContext = createContext();
 
 function UserContextProvider(props){
-    const url =process.env.BASE_API;
+    const url =`https://voting-be.herokuapp.com`;
 
     const [currentuser, setCurrentuser] = useState({});
 

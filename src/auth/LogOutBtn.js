@@ -9,7 +9,7 @@ import {   Flex,Select,
 import {useHistory} from "react-router-dom";
 dotenv.config()
 
-const url = `${process.env.BASE_API}/auth/`;
+const url = `https://voting-be.herokuapp.com/auth/`;
 
 function LogOutBtn(){
     const{getLoggedIn} = useContext(AuthContext);

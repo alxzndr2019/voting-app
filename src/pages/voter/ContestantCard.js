@@ -6,7 +6,7 @@ import UserContext from '../../context/UserContext';
 import { Box,Badge,Stack,useToast, Heading, useColorModeValue, Button,HStack, VStack, Image, AspectRatio, Container, Flex, Spacer, Center, Text, Divider, useProps } from "@chakra-ui/react"
 dotenv.config()
 
-const url =`${process.env.BASE_API}/votesessions/`;
+const url =`https://voting-be.herokuapp.com/votesessions/`;
 
 
 
@@ -42,7 +42,7 @@ const ContestantCard = (props) => {
             contestant
           };
           console.log(confirmData);
-          await axios.post(`${process.env.BASE_API}/auth/confirmation`, confirmData)
+          await axios.post(`https://voting-be.herokuapp.com/auth/confirmation`, confirmData)
     }catch(error){
         console.log(error);
     }

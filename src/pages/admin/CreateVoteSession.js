@@ -22,7 +22,7 @@ const CreateVoteSession = () => {
     const[votes, setVotes]=useState([])
     const[voters, setVoters]=useState([])
 
-    const url =`${process.env.BASE_API}/votesessions/`;
+    const url =`https://voting-be.herokuapp.com/votesessions/`;
 
     const toast = useToast()
 

@@ -10,7 +10,7 @@ dotenv.config()
 const Login = () => {
 
     const toast = useToast()
-    const url = `${process.env.BASE_API}/auth/`;
+    const url = `https://voting-be.herokuapp.com/auth/`;
 
   const[email, setEmail]= useState('');
   const[errorMessage, setErrorMesssage] = useState()

@@ -15,7 +15,7 @@ const VoteSession = () => {
 
     const {state}=useLocation();
     const history = useHistory();
-    const url =`${process.env.BASE_API}/votesessions/`;
+    const url =`https://voting-be.herokuapp.com/votesessions/`;
 
         useEffect(()=>{
             getVotesession()
