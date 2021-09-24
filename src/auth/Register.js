@@ -250,7 +250,7 @@ const {getCurrentuser}= useContext(UserContext);
 
                     }}
 
-                    onClick={sendOtp}
+                    onClick={register}
                     >
                      Signup!
                   </Button>
