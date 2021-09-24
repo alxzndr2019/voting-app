@@ -37,7 +37,10 @@ const Login = () => {
        password,
      };
      console.log(loginData);
-     await axios.post(`${url}login`, loginData);
+     let res = await axios.post(`${url}login`, loginData);
+
+     localStorage.setItem('token', res.data.token);
+
       await getCurrentuser();
       await rolechecker();
      await getLoggedIn();
