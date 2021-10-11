@@ -42,7 +42,7 @@ dotenv.config()
     const[name, setName]= useState('');
     const[email, setEmail]= useState('');
     const[nin, setNin]= useState('');
-    const[role, setRole]= useState("admin");
+    const[role, setRole]= useState("voter");
     const[password, setPassword]= useState('');
     const[passwordVerify, setPasswordVerify]= useState('');
     const[otpverify, setOtpVerify]= useState('');
