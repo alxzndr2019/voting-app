@@ -10,7 +10,7 @@ const AdminDashboard = () => {
     const[votesessions, setVotesessions]=useState([])
     const[users, setUsers]=useState([])
 
-    const url =`https://voting-be.herokuapp.com`;
+    const url =`http://localhost:8000`;
     useEffect(()=>{
         const interval = setInterval(()=>{
             getVotesessions()
@@ -52,7 +52,7 @@ const totalusers = users.length
             <Divider  w="90%"/>
 
         </Center>
-        <SimpleGrid columns={2} spacing={10} p={5} >
+        <SimpleGrid minChildWidth="300px" spacing={10} p={5} >
         <Box p='2' borderWidth='1px' borderColor={'blue.200'} rounded={'lg'}
         bg={useColorModeValue('white', 'gray.700')}
         boxShadow={'lg'} 

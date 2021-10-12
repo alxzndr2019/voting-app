@@ -16,7 +16,7 @@ const VoteTracker = () => {
     const[contestant, setContestant]=useState([])
     const[votesession, setVotesession]=useState([])
     const[mycontestant, setMycontestant]=useState([])
-    const url = `https://voting-be.herokuapp.com`;
+    const url = `http://localhost:8000`;
 
     
     useEffect(()=>{

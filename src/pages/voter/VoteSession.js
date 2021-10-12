@@ -15,7 +15,7 @@ const VoteSession = () => {
 
     const {state}=useLocation();
     const history = useHistory();
-    const url =`https://voting-be.herokuapp.com/votesessions/`;
+    const url =`http://localhost:8000/votesessions/`;
 
         useEffect(()=>{
             getVotesession()
@@ -57,7 +57,7 @@ const VoteSession = () => {
             <Divider  w="90%"/>
         </Center>
 
-        <SimpleGrid columns={[2, null, 3]} spacing={10} p={5} >
+        <SimpleGrid minChildWidth="300px" spacing={10} p={5} >
      { contestants.map((contestant,_id)=>(
                        
                         <ContestantCard

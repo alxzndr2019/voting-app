@@ -5,7 +5,7 @@ import axios from 'axios';
 import dotenv from "dotenv";
 dotenv.config()
 const VoteSessionCard = (props) => {
-  const url =`https://voting-be.herokuapp.com/votesessions/`;
+  const url =`http://localhost:8000/votesessions/`;
     
     const toast = useToast()
 
