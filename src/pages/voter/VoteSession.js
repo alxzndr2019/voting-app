@@ -57,7 +57,7 @@ const VoteSession = () => {
             <Divider  w="90%"/>
         </Center>
 
-        <SimpleGrid columns={[2, null, 3]} spacing={10} p={5} >
+        <SimpleGrid minChildWidth="300px" spacing={10} p={5} >
      { contestants.map((contestant,_id)=>(
                        
                         <ContestantCard

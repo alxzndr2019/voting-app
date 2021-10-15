@@ -72,7 +72,7 @@ console.log(votesessions)
             <Divider  w="90%"/>
         </Center>
 
-        <SimpleGrid columns={3} spacing={10} p={5} >
+        <SimpleGrid minChildWidth="150px" spacing={10} p={5} >
 
      { votesessions.map((votesession,_id)=>(
 
