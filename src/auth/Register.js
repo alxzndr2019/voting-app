@@ -161,7 +161,7 @@ const {getCurrentuser}= useContext(UserContext);
           setErrorMesssage(error.response.data.errorMessage);
           toast({
             title: error.response.data.errorMessage,
-            description: "Please Enter the correct details",
+            description: "Do the needful",
             status: "error",
             duration: 9000,
             isClosable: true,
