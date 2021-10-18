@@ -15,7 +15,8 @@ import VotesTracker from "./pages/voter/VotesTracker";
 import VoteSession from "./pages/voter/VoteSession";
 import AuthContext from './context/AuthContext';
 import UserContext from './context/UserContext';
-
+import ViewUsers from "./pages/admin/ViewUsers";
+import ViewSessions from "./pages/admin/ViewSessions";
 function Routes(){
       const {loggedIn} = useContext(AuthContext);
       const {currentuser}= useContext(UserContext);
@@ -73,6 +74,12 @@ function Routes(){
              
                    <AdminVoteTracker />
              </Route>
+             <Route  path="/allusers">
+             <ViewUsers />
+       </Route>
+       <Route  path="/allsessions">
+             <ViewSessions />
+       </Route>
                 </>
          )
        }

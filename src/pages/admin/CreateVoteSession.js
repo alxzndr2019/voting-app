@@ -35,7 +35,12 @@ const addcontestant =()=>{
         voters,
         votes
     }
+
     contestant.push(contestantData)
+    setName("")
+    setImage("")
+    setAboutj("")
+    onClose()
     console.log(contestant)
 }
 
@@ -66,7 +71,14 @@ async function createvotesession(e){
   
     }catch(error){
       console.log(error);
-      
+      toast({
+        title: error.response.data.errorMessage,
+        description: "Do the needful",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+        position:"top"
+      })
     }
   }
 
@@ -162,6 +174,7 @@ async function createvotesession(e){
                 </Stack>
               </Stack>
             </Box>
+            <Button as='a'  bgColor={'green.400'} href='./admindashboard' >Home</Button>
         </div>
     )
 }
