@@ -7,6 +7,8 @@ import { Spinner,Divider,useColorModeValue, Box, Heading, Button, Image, AspectR
 dotenv.config()
 
 const AdminDashboard = () => {
+    const {getCurrentuser, currentuser}= useContext(UserContext);
+
     const[votesessions, setVotesessions]=useState([])
     const[users, setUsers]=useState([])
 
@@ -46,7 +48,7 @@ const totalusers = users.length
     return (
         <div className="Footer">
           <Box p={5}  pr={5} >
-                <Heading>Admin Dashboard</Heading>
+                <Heading>Admin Dashboard welcome {currentuser.name}</Heading>
             </Box>
             <Center>
             <Divider  w="90%"/>
@@ -81,7 +83,7 @@ const totalusers = users.length
             <Divider/>
             <Box p='4'>
 
-<Button bgColor={'purple.400'} >View sessions</Button>
+<Button as ='a' bgColor={'purple.400'} href='./allsessions' >View sessions</Button>
 </Box>
    </Box>
    <Box p='2' borderWidth='1px' borderColor={'green.200'} rounded={'lg'}
@@ -97,7 +99,7 @@ const totalusers = users.length
 
             <Box p='4'>
 
-<Button bgColor={'green.400'} >View Users</Button>
+<Button as='a'  bgColor={'green.400'} href='./allusers' >View Users</Button>
 </Box>
 
    </Box>

@@ -18,7 +18,7 @@ function LogOutBtn(){
     async function logOut(e){
  history.push("/")
         e.preventDefault();
-     await axios.get(`${process.env.BASE_API}/auth/logout`);
+     await axios.get(`${url}logout`);
      await getLoggedIn();
   
     }
