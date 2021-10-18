@@ -42,7 +42,7 @@ dotenv.config()
     const[name, setName]= useState('');
     const[email, setEmail]= useState('');
     const[nin, setNin]= useState('');
-    const[role, setRole]= useState("voter");
+    const[role, setRole]= useState("");
     const[password, setPassword]= useState('');
     const[passwordVerify, setPasswordVerify]= useState('');
     const[otpverify, setOtpVerify]= useState('');
@@ -225,6 +225,20 @@ const {getCurrentuser}= useContext(UserContext);
                   <FormLabel>NIN (National Identification Number)</FormLabel>
                   <Input type="nin" placeholder="enter your nin"  onChange={(e)=>setNin(e.target.value)} value={nin}/>
                 </FormControl>
+                <FormLabel as="legend">
+             you are registering as a?
+           </FormLabel>
+           <RadioGroup>
+             <HStack spacing={20}>
+          <Radio onClick={() => setRole("admin")} value="Admin">
+               Worker
+          </Radio>
+          <Radio  onClick={() => setRole("voter")}value="Voter">
+               User
+          </Radio>
+             </HStack>
+           </RadioGroup>
+
                 <FormControl id="password">
                   <FormLabel>Password</FormLabel>
                   <Input type="password" onChange={(e)=>setPassword(e.target.value)} value={password}/>
