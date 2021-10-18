@@ -158,7 +158,6 @@ const {getCurrentuser}= useContext(UserContext);
         }catch(error){
           console.log(error);
           console.log(error.response);
-          setErrorMesssage(error.response.data.errorMessage);
           toast({
             title: error.response.data.errorMessage,
             description: "Do the needful",
