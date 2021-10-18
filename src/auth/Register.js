@@ -231,10 +231,10 @@ const {getCurrentuser}= useContext(UserContext);
            <RadioGroup>
              <HStack spacing={20}>
           <Radio onClick={() => setRole("admin")} value="Admin">
-               Worker
+               Admin
           </Radio>
           <Radio  onClick={() => setRole("voter")}value="Voter">
-               User
+               Voter
           </Radio>
              </HStack>
            </RadioGroup>
