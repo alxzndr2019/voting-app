@@ -157,7 +157,16 @@ const {getCurrentuser}= useContext(UserContext);
       
         }catch(error){
           console.log(error);
-          
+          console.log(error.response);
+          setErrorMesssage(error.response.data.errorMessage);
+          toast({
+            title: error.response.data.errorMessage,
+            description: "Please Enter the correct details",
+            status: "error",
+            duration: 9000,
+            isClosable: true,
+            position:"top"
+          })
         }
       }
 
