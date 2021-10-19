@@ -78,10 +78,10 @@ deactivate()
         p={8} >
             <Box p='2'><Heading>{props.votesession.position}</Heading></Box>
             <Divider/>
-            <Text textColor='yellow'>{props.votesession.about}</Text>
+            <Text textColor='yellow.900'>{props.votesession.about}</Text>
             <Divider/>
             <Text>{alert}</Text>
-            <HStack ><Text textColor='green.200'>voting ends in {days} days {hours} hours {minutes} minutes and {seconds} seconds</Text><Badge colorScheme="green">{props.votesession.active}</Badge></HStack>
+            <HStack ><Text textColor='green.900'>voting ends in {days} days {hours} hours {minutes} minutes and {seconds} seconds</Text><Badge colorScheme="green">{props.votesession.active}</Badge></HStack>
 
    </Box>
     )
