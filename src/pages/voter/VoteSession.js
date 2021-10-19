@@ -74,6 +74,7 @@ const VoteSession = () => {
 
 </SimpleGrid>
 
+<Button as='a'  bgColor={'green.400'} href='./voterdashboard' >Home</Button>
 
         </Box>
 
