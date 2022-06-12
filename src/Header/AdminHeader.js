@@ -13,7 +13,7 @@ const {currentuser}= useContext(UserContext);
         <Fragment>
             
             <div className="HeaderLinks">
-                <NavLink exact className="Link active" id="home" to='/'>Vote <span className="redden">easy</span></NavLink>
+                <NavLink exact className="Link active" id="home" to='/'>VOTE <span className="redden">EASY</span></NavLink>
 
  
  <div className="HeaderLinks-SubLinks">

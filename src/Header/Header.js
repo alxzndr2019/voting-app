@@ -13,14 +13,14 @@ const {currentuser}= useContext(UserContext);
         <Fragment>
             
             <div className="HeaderLinks">
-                <NavLink exact className="Link active" id="home" to='/'>Vote <span className="redden">easy</span></NavLink>
+                <NavLink exact className="Link active" id="home" to='/'>VOTE <span className="redden">EASY</span></NavLink>
 
  
  <div className="HeaderLinks-SubLinks">
  {
                    !loggedIn &&(
                         <>
-                        <NavLink activeClassName="active" className="Link" to='/login'>login</NavLink>
+                        <NavLink activeClassName="active" className="Link" to='/login'>LOGIN</NavLink>
                             </>
                 )
              }
@@ -32,7 +32,7 @@ const {currentuser}= useContext(UserContext);
 {
     loggedIn &&(
          <>
-         <NavLink activeClassName="active" className="Link" to='/votestracker'>votes</NavLink>
+         <NavLink activeClassName="active" className="Link" to='/voterdashboard'>SESSIONS</NavLink>
      
 
      <LogOutBtn>LOGOUT</LogOutBtn>

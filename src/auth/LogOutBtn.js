@@ -9,21 +9,22 @@ import {   Flex,Select,
 import {useHistory} from "react-router-dom";
 dotenv.config()
 
-const url = `https://voting-be.herokuapp.com/auth/`;
+const url = `http://localhost:8000/auth/`;
 
 function LogOutBtn(){
     const{getLoggedIn} = useContext(AuthContext);
     const history = useHistory();
 
     async function logOut(e){
- history.push("/")
+        history.push("/")
         e.preventDefault();
      await axios.get(`${url}logout`);
+    window.location.reload()
      await getLoggedIn();
   
     }
 return(
-    <button onClick={logOut}>logout</button>
+    <button style={{padding:"20px"}} onClick={logOut}>LOGOUT</button>
 )
 
 }

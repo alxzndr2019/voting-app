@@ -17,7 +17,7 @@ async function Checkrole(){
          history.push("/admindashboard")
         //  (<Redirect to="/admin-panel" />)
     }else{
-        history.push("/dashboard")
+        history.push("/")
         // (<Redirect to="/dashboard" />)
     }
 }

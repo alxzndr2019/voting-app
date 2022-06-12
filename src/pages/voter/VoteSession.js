@@ -14,8 +14,9 @@ const VoteSession = () => {
     const[errorMessage, setErrorMesssage] = useState()
 
     const {state}=useLocation();
+    const location = useLocation(); 
     const history = useHistory();
-    const url =`https://voting-be.herokuapp.com/votesessions/`;
+    const url =`http://localhost:8000`;
 
         useEffect(()=>{
             getVotesession()
@@ -30,7 +31,7 @@ const VoteSession = () => {
             },[]);
 
     const getVotesession =()=>{
-        axios.get(`${url}${state.id}`)
+        axios.get(`${url}${location.pathname}`,{withCredentials: true})
         .then((response)=>{
           const Votesession = response.data;
           setVotesession(Votesession);
@@ -38,7 +39,7 @@ const VoteSession = () => {
         .catch(error=>console.error(`Error:${error}`));
       }
       const getContestants =()=>{
-        axios.get(`${url}${state.id}/contestant`)
+        axios.get(`${url}${location.pathname}/contestant`,{withCredentials: true})
         .then((response)=>{
           const Contestants = response.data;
           setContestants(Contestants);

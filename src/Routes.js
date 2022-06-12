@@ -17,6 +17,8 @@ import AuthContext from './context/AuthContext';
 import UserContext from './context/UserContext';
 import ViewUsers from "./pages/admin/ViewUsers";
 import ViewSessions from "./pages/admin/ViewSessions";
+import PostAuthRoute from "./utils/PostAuthRoutes";
+import PrivateRoute from "./utils/PrivateRoutes";
 function Routes(){
       const {loggedIn} = useContext(AuthContext);
       const {currentuser}= useContext(UserContext);
@@ -29,23 +31,17 @@ function Routes(){
                    <Landing />
              </Route>
 
-             {
-                   !loggedIn &&(
-                        <>
+           
 
- <Route exact path="/register">
+ <PostAuthRoute exact path="/register">
  
                    <Register />
-             </Route>
-             <Route exact path="/login">
+             </PostAuthRoute>
+             <PostAuthRoute exact path="/login">
                    <Login />
-             </Route>
+             </PostAuthRoute>
 
-                         </>
-                )
-             }
-
-{
+           
            loggedIn &&(
                <>
 
@@ -59,17 +55,17 @@ function Routes(){
              <Route  path="/createvotesession">
                    <CreateVoteSession />
              </Route>
-             <Route  path="/voterdashboard">
+             <PrivateRoute  path="/voterdashboard">
              
                    <VoterDashboard />
-             </Route>
-             <Route  path="/votesession">
+             </PrivateRoute>
+             <Route  path="/votesessions/:id">
              
                    <VoteSession />
              </Route>
-             <Route  path="/admindashboard">
+             <PrivateRoute  path="/admindashboard">
                    <AdminDashboard />
-             </Route>
+             </PrivateRoute>
              <Route  path="/adminvotetracker">
              
                    <AdminVoteTracker />

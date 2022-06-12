@@ -18,7 +18,7 @@ dotenv.config()
 
 const ViewUsers =()=>{
     const [users, setUsers]=useState([])
-    const url =`https://voting-be.herokuapp.com/auth/users`;
+    const url =`http://localhost:8000/auth/users`;
     
     useEffect(()=>{
         getUsers()

@@ -18,7 +18,7 @@ dotenv.config()
 
 const ViewSessions =()=>{
     const [sessions, setSessions]=useState([])
-    const url =`https://voting-be.herokuapp.com/votesessions`;
+    const url =`http://localhost:8000/votesessions`;
     
     useEffect(()=>{
         getSessions()

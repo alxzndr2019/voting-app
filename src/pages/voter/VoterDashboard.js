@@ -11,7 +11,7 @@ const VoterDashboard = () => {
     const {currentuser} = useContext(UserContext);
 
     const[votesessions, setVotesessions]=useState([])
-    const url =`https://voting-be.herokuapp.com/`;
+    const url =`http://localhost:8000/`;
 
     const deadline = 'December 31 2015 23:59:59 GMT+0200';
     const {state}=useLocation();    

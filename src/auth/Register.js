@@ -37,7 +37,7 @@ dotenv.config()
     const MotionBox = motion(Box)
     const history = useHistory();
 
-    const url = `https://voting-be.herokuapp.com/auth/`;
+    const url = `http://localhost:8000/auth/`;
     const toast = useToast()
     const[name, setName]= useState('');
     const[email, setEmail]= useState('');
