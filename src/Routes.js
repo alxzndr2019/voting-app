@@ -42,8 +42,7 @@ function Routes(){
              </PostAuthRoute>
 
            
-           loggedIn &&(
-               <>
+         
 
                 <Route  path="/rolecheck">
                    <Rolecheck />
@@ -76,9 +75,7 @@ function Routes(){
        <Route  path="/allsessions">
              <ViewSessions />
        </Route>
-                </>
-         )
-       }
+       
             
         </Switch>
            </BrowserRouter>
